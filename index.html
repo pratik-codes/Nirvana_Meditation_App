@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Nirvana</title>
+      <link rel="shortcut icon" href="https://img.icons8.com/fluent/48/000000/brain.png" />
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+      <link href="//db.onlinewebfonts.com/c/03af38e6d90add293d43f1ef74ce755f?family=Adieu+Light" rel="stylesheet" type="text/css"/>
+      <link rel="stylesheet" href="/public/css/nav.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<section class="navbar">
+  
+</section>
+<body>
+
+      <section class="nav-bar">
+        <div class="responsive">
+          <nav>
+                <input type="checkbox" id="nav" class="hidden">
+                <label for="nav" class="nav-btn">
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                </label>
+                <div class="logo">
+                      <a href="#">Nirvana.</a>
+                </div>
+                <div class="nav-wrapper">
+                      <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#why">Why Meditation?</a></li>
+                            <li><a href="#meditate">Let's Meditate</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                      </ul>
+                </div>
+          </nav>
+    </div>
+    </section>
+
+    <section class="niravana-head">
+      <div class="nirvana-line">
+        <Marquee scrollamount=15 direction=right>Nirvana. Nirvana. Nirvana. Nirvana. Nirvana. Nirvana. Nirvana. Nirvana. Nirvana. </Marquee>
+      </div>
+    </section>
+
+
+    <section class="hero">
+      <div class="row responsive">
+        <div class="col hero1">
+          <h1 class="head">Meditate, study and relax*</h1>
+          <p>" we at nirvana wants you to enjoy you time here by listening to our selected ambience sound tracks and our excellent guided meditation. We have new music comming up soon. So stay tuned for that and have a good one 😉 "</p>
+          <div class="">
+            <button onclick="window.location.href='#meditate'"  type="button" class="btn btn-accent">Let's Meditate</button>
+            <button onclick="window.location.href='#contact'" stype="button" class="btn btn-black">Contact us!</button>
+          </div>       
+        </div>
+        <div class="col hero2">
+          <img class="svg1" src="/public/img/svg3.svg" alt="">
+        </div>
+        <div class="container">
+          <div class="scroll-down"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" class="why-section">
+      <div class="container why">
+        <div class="row ">
+          <div class="col">
+            <h1>Why Meditation?</h1>
+          </div>
+          <div class="col bord">
+            <p>1. Reduces stress Normally , mental and physical stress cause increased levels of the stress hormone cortisol. This produces many of the harmful effects of stress, such as the release of inflammatory chemicals called cytokines. These effects can disrupt sleep, promote depression and anxiety, increase blood pressure, and contribute to fatigue and cloudy thinking.</p>
+            <p>2. Controls anxiety. Meditation can reduce stress levels, which translates to less anxiety. A meta-analysis including nearly 1,300 adults found that meditation may decrease anxiety. Notably, this effect was strongest in those with the highest levels of anxiety</p>
+            <p>3. Promotes emotional health. Some forms of meditation can lead to improved self-image and a more positive outlook on life. For example, one review of treatments given to more than 3,500 adults found that mindfulness meditation improved symptoms of depressio</p>
+            <p>4. Enhances self-awareness. Some forms of meditation may help you develop a stronger understanding of yourself, helping you grow into your best self.</p>
+            <p>5. Lengthens attention span. Focused-attention meditation is like weight lifting for your attention span. It helps increase the strength and endurance of your attention.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="meditate" class="audio-set">
+      <div class=" time-duration">
+        <div class=" container time">
+          <div class=" container text-center">
+            <h1>Choose the time limit for the ambience sound</h1>
+          </div>
+            <div class=" time-select row center-div  d-flex justify-content-center ">
+              <button type="button" data-time="300" class="btn   btn-accent">5 Minutes</button>
+              <button type="button" data-time="600" class="btn   btn-accent">10 Minutes</button>
+              <button type="button" data-time="900" class="btn   btn-accent">15 Minutes</button>
+              <button type="button" data-time="1800" class="btn   btn-accent">30 Minutes</button>
+              <button type="button" data-time="2700" class="btn   btn-accent">45 Minutes</button>
+              <button type="button" data-time="3600" class="btn   btn-accent">60 Minutes</button>          
+            </div>
+          </div>
+        </div> 
+
+        
+          <div class="d-flex justify-content-center player-container">
+            <div class=" timer text-center">
+              <h1 class="time-display">00::00</h1>
+             </div> 
+          </div>
+          <div class="row justify-content-center padding ">
+            <audio class="song">
+              <source src="./public/sound/rain.mp3" />
+            </audio>
+            <div class="play">
+              <button type="button" class=" play btn btn-accent">Play</button>
+            </div>
+            <div class=" restart-btn-div">
+              <button type="button" class="restart-btn-div btn btn-black">RESTART</button>
+            </div>
+          </div>
+          
+
+          <div class="d-flex justify-content-center">
+            <div class="sound-picker card-container">
+              <div class=" card">
+                  <header class="article-header">
+                      <div>
+                          <div class="category-title">
+                              Guided  Meditation
+                          </div>
+                      </div>
+                      <h2 class="article-title">
+                          5 min meditation
+                      </h2>
+                  </header>
+                  <div class="author">
+                      <div class="profile"></div>
+                      <div class="info">
+                          <div class="name">Track 01</div>
+                      </div>
+                  </div>
+                  <div class="tags">
+                    <button data-sound="/public/sound/5min_med.mp3" type="button" class="btn btn-accent">Select</button>
+                  </div>
+              </div>
+              <div class="card">
+                  <header class="article-header">
+                      <div>
+                          <div class="category-title">
+                              Guided Meditation
+                          </div>
+                      </div>
+                      <div class="article-title">
+                        10 min meditation
+                      </div>
+                  </header>
+                  <div class="author">
+                      <div class="profile"></div>
+                      <div class="info">
+                          <div class="name">Track 02</div>
+                      </div>
+                  </div>
+                  <div class="tags">
+                    <button data-sound="/public/sound/10min_med.mp3" type="button" class="btn btn-accent">Select</button>
+                  </div>
+              </div>
+      
+              <div class="card">
+                  <header class="article-header">
+                      <div>
+                          <div class="category-title">
+                              Guided Meditation
+                          </div>
+                      </div>
+                      <div class="article-title">
+                        15 min meditation
+                      </div>
+                  </header>
+                  <div class="author">
+                      <div class="profile"></div>
+                      <div class="info">
+                          <div class="name">Track 03</div>
+                      </div>
+                  </div>
+                  <div class="tags">
+                    <button data-sound="/public/sound/15min_med.mp3" type="button" class="btn btn-accent">Select</button>
+                  </div>
+              </div>
+      
+              <div class="card">
+                  <header class="article-header">
+                      <div>
+                          <div class="category-title">
+                              Ambience Sound
+                          </div>
+                      </div>
+                      <div class="article-title">
+                          Rain Sound
+                      </div>
+                  </header>
+                  <div class="author">
+                      <div class="profile"></div>
+                      <div class="info">
+                          <div class="name">Track 04</div>
+                      </div>
+                  </div>
+                  <div class="tags">
+                    <button data-sound="/public/sound/rain.mp3" type="button" class="btn btn-accent">Select</button>
+                  </div>
+              </div>
+              <div class="card">
+                  <header class="article-header">
+                      <div>
+                          <div class="category-title">
+                              Ambience Sound
+                          </div>
+                      </div>
+                      <div class="article-title">
+                          Thunder Storm Sound
+                      </div>
+                  </header>
+                  <div class="author">
+                      <div class="profile"></div>
+                      <div class="info">
+                          <div class="name">Track 05</div>
+                      </div>
+                  </div>
+                  <div class="tags">
+                    <button data-sound="/public/sound/thunder.mp3" type="button" class="btn btn-accent">Select</button>
+                  </div>
+              </div>
+              <div class="card">
+                  <header class="article-header">
+                      <div>
+                          <div class="category-title">
+                              Ambience Sound
+                          </div>
+                      </div>
+                      <div class="article-title">
+                          City Sound
+                      </div>
+                  </header>
+                  <div class="author">
+                      <div class="profile"></div>
+                      <div class="info">
+                          <div class="name">Track 06</div>
+                      </div>
+                  </div>
+                  <div class="tags">
+                    <button data-sound="/public/sound/city.mp3" type="button" class="btn btn-accent">Select</button>
+                  </div>
+              </div>
+              <div class="card">
+                  <header class="article-header">
+                      <div>
+                          <div class="category-title">
+                              Ambience Sound
+                          </div>
+                      </div>
+                      <div class="article-title">
+                        Night Forest Sound
+                    </div>
+                  </header>
+                  <div class="author">
+                      <div class="profile"></div>
+                      <div class="info">
+                          <div class="name">Track 07</div>
+                      </div>
+                  </div>
+                  <div class="tags">
+                    <button data-sound="/public/sound/forest.mp3" type="button" class="btn btn-accent">Select</button>
+                  </div>
+              </div>
+              <div class="card">
+                <header class="article-header">
+                    <div>
+                        <div class="category-title">
+                            Ambience Sound
+                        </div>
+                    </div>
+                    <div class="article-title">
+                      Piano Sound
+                  </div>
+                </header>
+                <div class="author">
+                    <div class="profile"></div>
+                    <div class="info">
+                        <div class="name">Track 08</div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <button data-sound="/public/sound/piano.mp3" type="button" class="btn btn-accent">Select</button>
+                </div>
+            </div>
+          </div>
+          </div>
+    </section>
+
+
+
+    <section id="contact" class="contact">
+        <section class="why-section">
+            <div class="container why">
+              <div class="row ">
+                <div class="col contact-head">
+                  <h1>Contact*</h1>
+                  <p>If you have any suggestions for us for any new music please feel free to drop it here. </p>
+                </div>
+                <div class="col cont-form">
+                    <form action="contact" method="POST">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Name</label>
+                            <input type="text" class="form-control" id="name" >
+                          </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">Email address</label>
+                          <input type="email" class="form-control" id="email" >
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Message</label>
+                          <textarea class="form-control frm-label" id="message" rows="2"></textarea>
+                        </div>
+                        <input type="submit" value="Submit" class="btn my-style-black-send btn-accent">Submit</input>
+                      </form>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <footer>
+              <!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-4 bg-footer">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-4 mx-auto">
+  
+          <!-- Content -->
+          <h1 class="font-weight-bold text-uppercase mt-3 mb-4 ">Nirvana.🧠</h1>
+          <p>" We are always here to make you feel relaxed. Chao! 😉 "</p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+  
+
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://www.linkedin.com/in/pratiktiwari12/">Linkedin</a>
+            </li>
+            <li>
+              <a href="https://github.com/pratiktiwari1212/">Github</a>
+            </li>
+            <li>
+              <a href="https://medium.com/@pratik_codes">Medium</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+                Pune, IN
+            </li>
+            <li>
+              <a href="mailto:pratiktiwari1212@gmail.com">pratiktiwari1212@gmail.com</a>
+            </li>
+    
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <hr>
+  
+    
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="http://pratiktiwari.herokuapp.com/"> by Pratik Tiwari</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+          </footer>
+    </section>
+    
+    <script src="/public/Js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="/public/Js/animation.js"></script>
+
+    
+</body>
+</html>
+

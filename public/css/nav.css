@@ -1,0 +1,909 @@
+* {
+  box-sizing: border-box;
+  --bg-color: #201F85;
+  --bg2-color: #104A3A;
+  --second-color: white;
+  --third-color: white;
+  --frth-color: white;
+  --accent-color: #d195f9;
+  --divider-color: rgb(128,128,128);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  scroll-behavior: smooth;
+  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  font-weight: 400;
+  background-color: var(--bg-color) !important;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+} 
+
+nav {
+  padding: 8px;
+}
+
+
+
+.section {
+  height: 120vh;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:100;
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+  color: black;
+  border-radius: 50px !important;
+  margin-right: 10px;
+  margin-left: 0px !important;
+}
+
+.btn-accent:hover {
+  background-color: black;
+  color: white;
+  transition: 1s;
+  border: black;
+}
+
+.btn-black {
+  background-color: black;
+  color: white;
+  border-radius: 50px !important;
+}
+
+.btn-black:hover {
+  background-color: var(--accent-color);
+  color: black;
+  transition: 1s;
+} 
+/************************************ Nav bar **************************************************************/
+.logo {
+  float: left;
+  padding: 10px;
+  margin-left: 16px;
+  margin-top: 10px;
+}
+
+.logo a {
+  color: var(--third-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0px;
+  text-decoration: none;
+  font-family: "Adieu Light";
+}
+
+nav ul {
+  float: right;
+}
+
+nav ul li {
+  display: inline-block;
+  float: left;
+}
+
+
+
+nav ul li:not(:first-child) {
+  margin-left: 48px;
+
+}
+
+nav ul li:last-child {
+  margin-right: 24px;
+}
+
+nav ul li a {
+  display: inline-block;
+  outline: none;
+  color: var(--third-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  font-weight: lighter;
+  font-family: "Adieu Light";
+
+}
+
+.nav-wrapper a:hover {
+  color: var(--accent-color);
+}
+
+
+@media screen and (max-width: 864px) {
+  .logo {
+        padding: 0;
+  }
+
+  .nav-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: var(--bg-color);
+        opacity: 0;
+        transition: all 0.2s ease;
+  }
+
+  .nav-wrapper ul {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+  }
+
+  .nav-wrapper ul li {
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: right;
+        margin-bottom: 10px;
+  }
+
+  .nav-wrapper ul li:nth-child(1) a {
+        transition-delay: 0.2s;
+  }
+
+  .nav-wrapper ul li:nth-child(2) a {
+        transition-delay: 0.3s;
+  }
+
+  .nav-wrapper ul li:nth-child(3) a {
+        transition-delay: 0.4s;
+  }
+
+  .nav-wrapper ul li:nth-child(4) a {
+        transition-delay: 0.5s;
+  }
+
+  .nav-wrapper ul li:not(:first-child) {
+        margin-left: 0;
+  }
+
+  .nav-wrapper ul li a {
+        padding: 10px 24px;
+        opacity: 0;
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        transform: translateX(-20px);
+        transition: all 0.2s ease;
+  }
+
+  .nav-btn {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        z-index: 9999;
+        border-radius: 50%;
+  }
+
+  .nav-btn i {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: white;
+        border-radius: 2px;
+        margin-left: 14px;
+  }
+
+  .nav-btn i:nth-child(1) {
+        margin-top: 16px;
+  }
+
+  .nav-btn i:nth-child(2) {
+        margin-top: 4px;
+        opacity: 1;
+  }
+
+  .nav-btn i:nth-child(3) {
+        margin-top: 4px;
+  }
+}
+
+#nav:checked + .nav-btn {
+  transform: rotate(45deg);
+}
+
+#nav:checked + .nav-btn i {
+  background: white;
+  transition: transform 0.2s ease;
+}
+
+#nav:checked + .nav-btn i:nth-child(1) {
+  transform: translateY(6px) rotate(180deg);
+}
+
+#nav:checked + .nav-btn i:nth-child(2) {
+  opacity: 0;
+}
+
+#nav:checked + .nav-btn i:nth-child(3) {
+  transform: translateY(-6px) rotate(90deg);
+}
+
+#nav:checked ~ .nav-wrapper {
+  z-index: 9990;
+  opacity: 1;
+}
+
+#nav:checked ~ .nav-wrapper ul li a {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hidden {
+  display: none;
+}
+
+
+/***************************************** Moving Head **************************************************************/
+
+.section {
+  transition: 70%;
+  margin: 160px auto;
+}
+
+
+.nirvana-line{
+  padding-top: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+  height: 150px;
+  left: 500px;
+}
+
+.nirvana-line>marquee {
+  color: var(--third-color);
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  font-size: 3.5rem;
+  font-weight: 500;
+  font-family: "Adieu Light";
+}
+
+.scroll-icon {
+  height: 100px;
+}
+
+/***************************************** hero section **************************************************************/
+
+.my-class {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pd {
+  width: 100%;
+  justify-content: space-between;
+  border-color: black;
+}
+
+
+
+.hero1{
+  padding-top: 30px;
+  color: var(--frth-color);
+  margin-left: 100px;
+  height: 760px;
+
+}
+
+.head {
+  width: 800px;
+  font-size: 6rem;
+  font-family: "Adieu Light";
+  font-weight: 400;
+  border-bottom: var(--divider-color) 0.01px solid;
+}
+
+
+
+.hero1>p {
+  max-width: 600px;
+  font-size: 1rem;
+  color: var(--frth-color);
+  font-family: 'Poppins', sans-serif;
+  padding-top: 30px;
+}
+
+
+.hero2 {
+  align-content: center;
+  padding-left: 100px;
+  padding-bottom: 0px;
+  padding-top: 70px;
+
+}
+
+.svg1{
+  max-height: 500px;
+}
+
+
+
+.scroll-down {
+  height: 50px;
+  width: 30px;
+  border: 2px solid white;
+  position: relative;
+  left: 50%;
+  bottom: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border: 2px solid white;
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+
+.scroll-down::before {
+  top: 30%;
+  animation-delay: 0.3s;
+  /* animation: scroll-down 1s ease-in-out infinite; */
+}
+
+@keyframes scroll-down {
+  0% {
+    /* top:20%; */
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
+}
+
+/***************************************** why med  **************************************************************/
+.why-section {
+  background-color: white;
+}
+
+.why {
+  background-color: white;
+}
+
+.why h1 {
+  text-align: left;
+  font-size: 4rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-bottom: var(--divider-color) 0.01px solid;
+  font-family: "Adieu Light";
+  font-weight: 400;
+  width: 550px;
+}
+
+.why p {
+  font-size: .8rem;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  width: 400px;
+  margin-left: 60px;
+}
+
+
+
+.bord {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: var(--divider-color) 0.01px solid;
+}
+
+.bord:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+
+/********************************************* sound part **************************************************************/
+
+.time-duration {
+  display: flex;
+  color: white;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  justify-content: center;
+  font-family: "Adieu Light";
+  font-weight: 400;
+  padding-right: 50px;
+  padding-left: 50px;
+
+}
+
+.time-duration h1 {
+  font-size: 2rem;
+
+}
+
+.time:hover {
+  background-color: var(--accent-color);
+  color: black;
+  transition: .7s;
+}
+
+.time {
+  border: black solid 0.01rem;
+  padding: 20px;
+
+}
+
+.time-select button{
+  margin: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.timer {
+  border: black solid 0.01rem;
+  justify-content: center;
+  width: 100px;
+  padding-top: 10px;
+  color: white;
+}
+
+.timer>h1 {
+  font-family: "Poppins";
+  font-weight: 100px;
+  font-size: 1.5rem;
+}
+
+.timer:hover {
+  background-color: var(--accent-color);
+  color: black;
+  transition: .7s;
+  border-radius: 30px;
+}
+
+.center-div {
+  padding-top: 30px;
+  font-family: "Poppins";
+
+}
+
+.center-div button {
+  margin-bottom: 10px;
+}
+
+.center-btn {
+  display: flex;
+  justify-content: center;  
+}
+
+.restart-btn {
+  color: black;
+  margin-left: 5px;
+}
+
+.restart-btn:hover {
+  background-color: black;
+  transition: 1s;
+}
+
+.pad-button  {
+  margin-top: 10px;
+}
+
+.padding {
+  padding: 10px;
+}
+
+/********************************************* card Genre **************************************************************/
+.genre-cards{
+  margin: 0;
+  padding: 0;
+}
+
+.card-container {
+  align-items: center;
+  width: 800px;
+  height: 375px;
+  margin: 20px;
+  overflow-x: scroll;
+  display: flex;
+  background-color: #100e17 ;
+  padding: 3rem;
+  border: black 5px solid;
+  overflow-y: hidden;
+  border-radius: 20px;
+}
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  min-width: 200px !important;
+  height: 300px;
+  border-radius: 16px;
+  background-color: #17141d !important;
+  box-shadow: -1rem 0 3rem #000;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  transition: 0.2s;
+  border-radius: 20px !important;
+}
+
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0 1rem;
+}
+
+.tags div {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border: 3px solid #28242f;
+  border-radius: 2rem;
+}
+
+.card .category-title {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.card .article-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.card .article-header {
+  margin-bottom: auto;
+}
+
+.card .author {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+}
+
+.author .info .caption {
+  color: #8a8a8a;
+}
+
+.card:not(:first-child) {
+  margin-left: -130px;
+}
+
+.card:hover {
+  transform: translateY(-1rem);
+}
+
+.card:hover~.card{
+  transform: translateX(130px);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.btn-sm {
+  padding: 10px;
+  font-size: .5rem;
+}
+
+
+.name{
+  color: white;
+}
+
+
+
+/***************************************** contact  **************************************************************/
+
+.contact {
+  background-color: white;
+}
+
+.contact-head>h1 {
+    max-width: 400px;
+    font-size: 4rem;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border-bottom: var(--divider-color) 0.01px solid;
+    font-family: "Adieu Light";
+    font-weight: 400;
+    width: 550px;
+}
+
+.contact-head>p {
+  text-align: left;
+  max-width: 400px;
+  font-size: .9rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 80;
+
+}
+
+.cont-form {
+  margin: 10px !important;
+  max-width: 400px;
+  border: var(--divider-color) 0.01px solid;
+}
+
+.cont-form:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+.form-group {
+  padding: 20px;
+  margin: 0px;
+}
+
+.form-group input {
+  border: none;
+  border-bottom: var(--divider-color) 0.01px solid;
+  border-radius: 0px;
+  outline:none !important;
+  margin-top: 0px;
+}
+
+.frm-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: .8rem;
+  margin: 0vh;
+  padding: 0vh;
+
+}
+
+.my-style-black-send {
+  background-color: black;
+  font-size: .5rem !important;
+  margin-bottom: 10px;
+  color: white;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+/***************************************** footer  **************************************************************/
+
+.bg-footer{
+  background-color: var(--bg-color) !important;
+  color: white;
+  font-family: "Poppins";
+}
+
+.bg-footer a {
+  color: var(--accent-color);
+}
+
+.bg-footer h1 {
+  border-bottom: var(--divider-color) 0.01px solid;
+  font-family: "Adieu Light";
+}
+
+/**************************************************88 VIDEO ******************************************/
+
+
+/***************************************** media queries **************************************************************/
+
+@media screen and (max-width: 1440px) {
+  .svg1{
+    padding-top: 20px;
+    max-height: 400px;
+    margin-top: 0;
+  }
+
+  .hero1 {
+    padding-top: 10px;
+    max-height: 540px;
+  }
+
+  .head {
+    width: 500px;
+    font-size: 3.5rem;
+  }
+
+  .hero1>p {
+    width: 500px;
+    font-size: large;
+  }
+  
+  .hero2 {
+    padding-top: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .svg1{
+    margin-top: 40px;
+    max-height: 400px;
+    padding-left: 50px;
+    margin-bottom: 50px;
+  }
+
+  .hero1 {
+    padding-top: 10px;
+    height: 350px;
+  }
+
+  .head {
+    font-size: 5rem;
+    width: 500px;
+    font-size: 3rem;
+  }
+
+  .hero1>p {
+    width: 500px;
+    font-size: large;
+  }
+
+  .scroll-down{
+    display: none;
+  }
+
+ 
+
+  .why p {
+    font-size: 0.7rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    width: 400px;
+  }
+
+  .bord {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .why h1{
+    margin-bottom: 0px;
+  }
+
+  .cont-form {
+    margin-left: 15px;
+    margin-right: 0px;
+    
+  }
+
+  .time {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+} 
+
+
+@media screen and (max-width: 450px) {
+  .svg1{
+    max-height: 250px;
+    padding-left: 0px;
+  }
+
+  .hero1 {
+    padding-top: 5px;
+    height: auto;
+    margin-left: 40px;
+  }
+
+  .head {
+    width: 300px;
+    font-size: 3rem;
+    padding-top: 0px;
+  }
+
+  .hero1>p {
+    width: 300px;
+    font-size: large;
+  }
+
+  .hero2 {
+    align-content: center;
+    padding-left: 40px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    margin-left: 30px;
+  }
+
+  .scroll-down{
+    display: none;
+  }
+
+  .my-style {
+    font-size: 10px;
+  }
+  
+  .my-style-black {
+    font-size: 10px;
+  }
+
+  .why p {
+    font-size: 0.7rem;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    width: 310px;margin-right: 10px;
+  }
+
+  .bord {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .why h1{
+    font-size: 2rem;
+    width: 350px;
+
+  }
+  .contact-head>h1 {
+    font-size: 3rem;
+    width: 300px;
+  }
+  .cont-form {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .time {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .card-container{
+    width: 950px;
+  }
+
+  
+}
+
+
