@@ -15,3 +15,12 @@
 
 ### Following is the design of the website. This includes the dekstop view and also mobile view hence the website is fully responsive.
 ### You can see the live view of the website [here](https://nirvana-by-pratik.herokuapp.com/).
+
+# Dekstop view:
+
+![Image](https://github.com/pratiktiwari1212/Nirvana_Meditation_App/blob/main/dekstop1.jpg)
+![Image](https://github.com/pratiktiwari1212/Nirvana_Meditation_App/blob/main/dekstop2.jpg)
+
+# Phone view:
+
+![Image](https://github.com/pratiktiwari1212/Nirvana_Meditation_App/blob/main/phone.jpg)
