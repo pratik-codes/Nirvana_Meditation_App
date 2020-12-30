@@ -17,6 +17,7 @@
 ### You can see the live view of the website [here](https://nirvana-by-pratik.herokuapp.com/).
 
 # Dekstop view:
+![Image](https://github.com/pratiktiwari1212/Nirvana_Meditation_App/blob/main/Nirvana.gif)
 
 ![Image](https://github.com/pratiktiwari1212/Nirvana_Meditation_App/blob/main/dekstop1.jpg)
 ![Image](https://github.com/pratiktiwari1212/Nirvana_Meditation_App/blob/main/dekstop2.jpg)
